@@ -1,0 +1,19 @@
+CREATE TABLE personEntity (
+    id INTEGER NOT NULL PRIMARY KEY,
+    firstName TEXT NOT NULL,
+    lastName TEXT NOT NULL
+);
+
+CREATE INDEX person_first_name ON personEntity(firstName);
+
+getPersionById:
+SELECT * FROM personEntity WHERE id = ?;
+
+getALlPersion:
+SELECT * FROM personEntity;
+
+insertPersion:
+INSERT OR REPLACE INTO personEntity VALUES ?;
+
+delePersionById:
+DELETE FROM personEntity WHERE id = ?;
